@@ -1,0 +1,50 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Author</th>
+      <th scope="col">Title</th>
+      <th scope="col">Content</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let item of readData"
+      [style.border]="
+        item.downvote.length < item.upvote.length
+          ? '2px green solid'
+          : '2px red solid'
+      "
+    >
+      <th scope="row"></th>
+      <td>{{ item.author }}</td>
+      <td>{{ item.title }}</td>
+      <td>{{ item.content }}</td>
+      <button
+        [formGroup]="newUpvote"
+        type="button"
+        (click)="addUpvote(item._id)"
+        class="btn btn-outline-success btn-sm"
+      >
+        upvote <span>{{ item.upvote.length }}</span>
+      </button>
+      <button
+        [formGroup]="newDownvote"
+        type="button"
+        (click)="addDownvote(item._id)"
+        class="btn btn-outline-danger btn-sm"
+      >
+        downvote <span>{{ item.downvote.length }}</span>
+      </button>
+      <button
+        routerLink="details/{{ item._id }}"
+        class="btn btn-outline-primary btn-sm"
+      >
+        continue reading
+      </button>
+    </tr>
+  </tbody>
+</table>

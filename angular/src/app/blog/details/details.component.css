@@ -1,0 +1,16 @@
+.blog-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.blog-one .vote {
+  display: flex;
+  flex-direction: row;
+}
+
+.blog-one .vote h5 {
+  margin: 7px;
+}

@@ -1,0 +1,65 @@
+<div class="card-box">
+  <form [formGroup]="newBlog" (ngSubmit)="createBlog()">
+    <div class="row" style="display: block">
+      <h2 style="text-align: center">adding blog</h2>
+    </div>
+    <div class="row">
+      <div class="offset-lg-3 col-lg-6">
+        <div class="form-group">
+          <label for="txtname">title</label>
+          <input
+            type="text"
+            id="txtname"
+            class="form-control"
+            formControlName="title"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="offset-lg-3 col-lg-6">
+        <div class="form-group">
+          <label for="txtname">content</label>
+          <input
+            type="text"
+            id="txtname"
+            class="form-control"
+            formControlName="content"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="offset-lg-3 col-lg-6">
+        <div class="form-group">
+          <label for="txtname">author</label>
+          <input
+            type="text"
+            id="txtname"
+            class="form-control"
+            formControlName="author"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="offset-lg-3 col-lg-2">
+        <br />
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-lg btn-block">
+            Add
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <br />
+      </div>
+    </div>
+  </form>
+</div>
