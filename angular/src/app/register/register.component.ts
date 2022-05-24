@@ -34,11 +34,10 @@ export class RegisterComponent implements OnInit {
           this.responsedata = result;
           this.route.navigate(['login']);
           this.message = 'Customer saved successfully.';
+        }else {
+          this.message = 'Please Enter valid data';
         }
       });
-    } else {
-      this.message = 'Please Enter valid data';
-      console.log(this.message);
-    }
+    } 
   }
 }

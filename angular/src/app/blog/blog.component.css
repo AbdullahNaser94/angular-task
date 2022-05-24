@@ -1,0 +1,6 @@
+.table tbody tr .btn-three {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}

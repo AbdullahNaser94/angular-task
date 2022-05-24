@@ -29,6 +29,8 @@ export class LoginComponent implements OnInit {
           this.responsedata = result;
           localStorage.setItem('tokenAngular', this.responsedata.token);
           this.route.navigate(['']);
+        }else {
+          this.message = 'Please Enter valid data';
         }
       });
     }
